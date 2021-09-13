@@ -1,0 +1,30 @@
+{
+  "name": "react_for_senior_engineers",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:wj2kim/react_for_senior_engineers.git",
+  "author": "wj2kim <wj2kim@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "normalize-scss": "^7.0.1"
+  },
+  "devDependencies": {
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.4.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-sass-guidelines": "^8.0.0",
+    "stylelint-prettier": "^1.2.0"
+  },
+  "scripts": {
+    "lint": "stylelint './**/*.scss'",
+    "lint:fix": "yarn lint --fix"
+  },
+  "husky": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.scss": "yarn lint:fix"
+  }
+}
